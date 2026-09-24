@@ -1,5 +1,6 @@
 {
   "name": "@jarjut/binance-futures-mcp",
+  "type": "module",
   "private": false,
   "license": "MIT",
   "repository": {

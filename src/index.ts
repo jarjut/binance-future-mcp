@@ -105,6 +105,11 @@ app.use(
 	},
 );
 
-app.listen(port, () => {
-	console.log(`Server running at http://localhost:${port}`);
-});
+// ponytail: skip custom serverless wrapper; Vercel natively supports exported Express app
+export default app;
+
+if (!process.env.VERCEL) {
+	app.listen(port, () => {
+		console.log(`Server running at http://localhost:${port}`);
+	});
+}
